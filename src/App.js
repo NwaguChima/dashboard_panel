@@ -55,7 +55,6 @@ const App = () => {
               <Route path="/color-picker" element={<h1>Color Picker</h1>} />
 
               {/* Charts */}
-              {/* routes for line, area, bar, pie, financial, color-mapping, pyramid, and stacked */}
               <Route path="/line" element={<h1>Line</h1>} />
               <Route path="/area" element={<h1>Area</h1>} />
               <Route path="/bar" element={<h1>Bar</h1>} />
