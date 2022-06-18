@@ -20,6 +20,7 @@ const Kanban = () => {
           contentField: "Summary",
           headerField: "Id",
         }}
+        keyField="Status"
       >
         <ColumnsDirective>
           {kanbanGrid.map((column, index) => (
