@@ -1,7 +1,7 @@
 import React from "react";
 import {
   ChartComponent,
-  SeriesColectionDirective,
+  SeriesCollectionDirective,
   SeriesDirective,
   Inject,
   Legend,
@@ -15,8 +15,26 @@ import {
   stackedCustomSeries,
 } from "../../data/dummy";
 
-const Stacked = () => {
-  return <div>Stacked</div>;
+const Stacked = ({ width, height }) => {
+  return (
+    <ChartComponent
+      width={width}
+      height={height}
+      id="charts"
+      primaryXAxis={stackedPrimaryXAxis}
+      primaryYAxis={stackedPrimaryYAxis}
+      chartArea={{ border: { width: 0 } }}
+      tooltip={{ enable: true }}
+      legendSettings={{ background: "white" }}
+    >
+      <Inject services={[StackingColumnSeries, Legend, Tooltip, Category]} />
+      <SeriesCollectionDirective>
+        {stackedCustomSeries.map((series, index) => (
+          <SeriesDirective key={index} {...series} />
+        ))}
+      </SeriesCollectionDirective>
+    </ChartComponent>
+  );
 };
 
 export default Stacked;
