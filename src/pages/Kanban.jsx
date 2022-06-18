@@ -1,7 +1,6 @@
 import React from "react";
 import {
   KanbanComponent,
-  Inject,
   ColumnsDirective,
   ColumnDirective,
 } from "@syncfusion/ej2-react-kanban";
